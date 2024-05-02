@@ -12,6 +12,7 @@ secretkey = config.BaseConfig.SECRETKEY
 FileList = config.BaseConfig.FileList
 
 
+# 获取db文件里面的数据表集合
 def get_table(path,filename):
     db = sqlite.connect(path + filename)
     db_cursor = db.cursor()
@@ -26,7 +27,7 @@ def get_table(path,filename):
     table_df = pd.DataFrame(data_list)
     return table_df    
 
-
+# 通过db文件及table表名获取数据
 def get_data(path,filename,table):
     db = sqlite.connect(path + filename)
     db_cursor = db.cursor()
@@ -42,7 +43,7 @@ def get_data(path,filename,table):
 
     return resdata_list
 
-
+# 获取微信好友及其对应的db
 def get_userdb():
     userdb = pd.DataFrame()
     chatinfo_path = FilePath + 'Message/'
@@ -56,6 +57,7 @@ def get_userdb():
     print("userchat save success!")
     return userdb
 
+# 获取用户信息
 def get_user_info():
     user_info_df = pd.DataFrame()
     path = FilePath + "Contact/"
@@ -79,6 +81,7 @@ def get_user_info():
     print("userinfo save success!")
     return user_info_df
 
+# 检索用户所在的数据库
 def get_dbfile(userdb,userid):
     chatid = userdb.query("content.str.contains('%s')"%(userid))
     if len(chatid['db'])==0:
@@ -86,6 +89,7 @@ def get_dbfile(userdb,userid):
     else:
         return chatid['db'].drop_duplicates().values[0]
 
+# 清洗聊天记录
 def wash_userchat(userchatlist):
     userchat_df = pd.DataFrame()
     for i in userchatlist:
@@ -97,6 +101,7 @@ def wash_userchat(userchatlist):
         userchat_df = pd.concat([userchat_df,pd.DataFrame(tmp,index=[0])])
     return userchat_df
 
+# 获取所有的聊天记录并保存
 def get_all_user_chat_context():
     userdata = get_user_info()
     userdb = get_userdb()
