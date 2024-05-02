@@ -22,6 +22,12 @@ python版本：python3.11
 python core/main.py
 ```
 
+## 更多
+
+更多项目介绍参考CSDN文章
+1、[【个人开发】通过SQLite获取微信聊天记录](https://blog.csdn.net/weixin_44505713/article/details/131486010)
+2、[【个人开发】通过python导出微信聊天记录](https://blog.csdn.net/weixin_44505713/article/details/138392189)
+
 
 ## 写在最后
 如有问题，欢迎issues讨论~
