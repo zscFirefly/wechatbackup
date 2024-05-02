@@ -1,7 +1,7 @@
-import sys 
+import sys
 sys.path.append("..")
 import pysqlcipher3.dbapi2 as sqlite
-import pandas as pd 
+import pandas as pd
 import pysqlcipher3
 
 from utils import functions
@@ -25,7 +25,7 @@ def get_table(path,filename):
     db_cursor.execute("SELECT name FROM sqlite_master;")
     data_list = db_cursor.fetchall()
     table_df = pd.DataFrame(data_list)
-    return table_df    
+    return table_df
 
 # 通过db文件及table表名获取数据
 def get_data(path,filename,table):
@@ -138,4 +138,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

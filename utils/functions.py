@@ -6,26 +6,26 @@ from datetime import datetime
 def md5_encrypt(input_string):
     """
     对输入的字符串进行MD5加密并返回其十六进制表示。
-    
+
     参数:
     input_string (str): 需要加密的字符串。
-    
+
     返回:
     str: 加密后的MD5值，以32位小写十六进制字符串形式表示。
     """
     # 确保字符串被正确编码为字节，因为hashlib的update方法需要字节类型
     if input_string != None:
         byte_string = input_string.encode('utf-8')
-        
+
         # 创建一个md5对象
         md5_hash = hashlib.md5()
-        
+
         # 更新md5对象的状态，使其包含输入数据
         md5_hash.update(byte_string)
-        
+
         # 获取加密后的16进制字符串表示
         encrypted_string = md5_hash.hexdigest()
-        
+
         return encrypted_string
 
     else:
