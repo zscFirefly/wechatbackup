@@ -24,8 +24,10 @@ python core/main.py
 
 ## 更多
 
-更多项目介绍参考CSDN文章
+更多项目介绍参考如下：
+
 1、[【个人开发】通过SQLite获取微信聊天记录](https://blog.csdn.net/weixin_44505713/article/details/131486010)
+
 2、[【个人开发】通过python导出微信聊天记录](https://blog.csdn.net/weixin_44505713/article/details/138392189)
 
 
