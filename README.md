@@ -20,5 +20,5 @@ python core/main.py
 ```
 
 
-## 最后
+## 写在最后
 如有问题，欢迎issues讨论~
