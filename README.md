@@ -18,3 +18,7 @@ python版本：python3.11
 ```python
 python core/main.py
 ```
+
+
+## 最后
+如有问题，欢迎issues讨论~
