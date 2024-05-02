@@ -7,6 +7,9 @@
 python版本：python3.11
 
 
+## 效果预览
+![聊天截图](./images/demo.png)
+
 ## 部署方式
 - 修改config/config.py配置
 	- **FilePath:** 微信文件路径
